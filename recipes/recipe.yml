@@ -10,6 +10,7 @@ image-version: 40 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: akmods # Various kernel modules.
   - type: files
     files:
       - usr: /usr # copies config/files/usr into your image's /usr.
@@ -24,7 +25,6 @@ modules:
       # - starship
       - gnome-console
       - virt-manager
-      - cascadia-code-fonts
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -32,9 +32,24 @@ modules:
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
       - gnome-terminal
       - gnome-terminal-nautilus
+      # - google-droid-sans-fonts # Oh, no! We cannot remove this.
+
+  # GNOME Shell Extensions
+  - type: rpm-ostree
+    install:
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-gsconnect
+      - nautilus-gsconnect
+      - webextension-gsconnect
+
+  # Fonts
+  - type: rpm-ostree
+    install:
+      - cascadia-code-fonts
+      - cascadia-mono-fonts
+    remove:
       - open-sans-fonts
       - adobe-source-code-pro-fonts
-      # - google-droid-sans-fonts # Oh, no! We cannot remove this.
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
