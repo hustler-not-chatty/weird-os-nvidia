@@ -34,7 +34,7 @@ modules:
       - gnome-terminal-nautilus
       - open-sans-fonts
       - adobe-source-code-pro-fonts
-      - google-droid-sans-fonts
+      # - google-droid-sans-fonts # Oh, no! We cannot remove this.
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
