@@ -24,6 +24,7 @@ modules:
       # - starship
       - gnome-console
       - virt-manager
+      - cascadia-code-fonts
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -32,6 +33,8 @@ modules:
       - gnome-terminal
       - gnome-terminal-nautilus
       - open-sans-fonts
+      - adobe-source-code-pro-fonts
+      - google-droid-sans-fonts
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
