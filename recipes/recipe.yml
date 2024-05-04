@@ -55,6 +55,11 @@ modules:
       - open-sans-fonts
       - adobe-source-code-pro-fonts
 
+  # We have removed Source Code Pro, so we have to make a substitute.
+  - type: gschema-overrides
+    include:
+      - zz1-monospace-font.gschema.override
+
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
