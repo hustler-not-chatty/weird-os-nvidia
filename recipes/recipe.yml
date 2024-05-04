@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: weird-os-nvidia
 # description will be included in the image's metadata
-description: This is my personal OS image with bundled NVidia drivers.
+description: This is my personal OS image with NVidia drivers bundled.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-nvidia
@@ -15,12 +15,12 @@ modules:
       - v4l2loopback
       - wl
       - evdi
+
   - type: files
     files:
       - usr: /usr # copies config/files/usr into your image's /usr.
                   # put configuration files you want in /etc/ on a booted system 
                   # in /usr/etc/ in the image. read more in files module reference.
-
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
@@ -59,6 +59,7 @@ modules:
   - type: gschema-overrides
     include:
       - zz1-monospace-font.gschema.override
+      - zz1-enabled-extensions.gschema.override
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
