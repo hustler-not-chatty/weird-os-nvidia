@@ -12,9 +12,9 @@ image-version: 40 # latest is also supported if you want new updates ASAP
 modules:
   - type: akmods # Various kernel modules.
     install:
+      - evdi
       - v4l2loopback
       - wl
-      - evdi
 
   - type: files
     files:
