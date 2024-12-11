@@ -13,6 +13,7 @@ modules:
   - type: akmods # Various kernel modules.
     install:
       - evdi
+      - openrazer
       - v4l2loopback
       - wl
 
