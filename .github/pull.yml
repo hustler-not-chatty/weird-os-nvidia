@@ -1,5 +1,5 @@
 version: "1"
 rules:
   - base: main
-    upstream: blue-build:master # 
+    upstream: blue-build:main # 
     mergeMethod: rebase
