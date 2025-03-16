@@ -13,10 +13,7 @@ image-version: 41 # latest is also supported if you want new updates ASAP
 modules:
   - type: akmods # Various kernel modules.
     base: main
-    install:
-      - evdi
-      - v4l2loopback
-      - wl
+    install: []
 
   - type: files
     files:
