@@ -1,3 +1,5 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
 name: weird-os-nvidia
 # description will be included in the image's metadata
@@ -13,7 +15,6 @@ modules:
   - type: akmods # Various kernel modules.
     install:
       - evdi
-      - openrazer
       - v4l2loopback
       - wl
 
@@ -71,9 +72,6 @@ modules:
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
-      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      # repo-name: flathub
-      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - org.mozilla.firefox
         - com.mattjakeman.ExtensionManager
