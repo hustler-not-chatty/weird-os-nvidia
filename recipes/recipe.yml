@@ -62,7 +62,7 @@ modules:
       - zz1-enabled-extensions.gschema.override
 
   - type: default-flatpaks
-    configuration:
+    configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
         # If no repo information is specified, Flathub will be used by default
