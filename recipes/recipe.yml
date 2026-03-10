@@ -53,7 +53,6 @@ modules:
       - cascadia-mono-fonts
     remove:
       - open-sans-fonts
-      - adobe-source-code-pro-fonts
 
   # We have removed Source Code Pro, so we have to make a substitute.
   - type: gschema-overrides
