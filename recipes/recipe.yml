@@ -32,6 +32,7 @@ modules:
       - ptyxis
       - gnome-text-editor
       - loupe
+      - papers
 
   # GNOME Shell Extensions
   - type: rpm-ostree
@@ -69,7 +70,6 @@ modules:
           - org.mozilla.firefox
           - com.mattjakeman.ExtensionManager
           - io.github.celluloid_player.Celluloid
-          - org.gnome.Evince
           - org.gnome.SimpleScan
           # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
         # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
