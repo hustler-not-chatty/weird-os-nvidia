@@ -23,7 +23,6 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-      # - google-droid-sans-fonts # Oh, no! We cannot remove this.
    
   # GNOME core apps
   - type: dnf
@@ -57,7 +56,6 @@ modules:
     remove:
       packages:
       - open-sans-fonts
-      - google-droid-sans-fonts
 
   # We have removed Source Code Pro, so we have to make a substitute.
   - type: gschema-overrides
